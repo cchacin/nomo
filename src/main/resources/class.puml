@@ -1,0 +1,27 @@
+@startuml
+
+class CustomerController {
+    void create(Customer request)
+    Customer find(UUID id)
+}
+
+class CustomerService {
+    void create(Customer request)
+    Customer find(UUID id)
+}
+
+class CustomerRepository {
+    void create(Customer request)
+    Customer find(UUID id)
+}
+
+class CustomerCache {
+    void create(Customer request)
+    Customer find(UUID id)
+}
+
+CustomerController --> CustomerService
+CustomerService --> CustomerRepository
+CustomerService --> CustomerCache
+
+@enduml

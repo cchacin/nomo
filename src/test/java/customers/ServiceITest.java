@@ -13,7 +13,7 @@ import javax.enterprise.inject.se.SeContainerInitializer;
 import java.util.Optional;
 import java.util.UUID;
 
-class CustomerServiceITest extends Assertions {
+class ServiceITest extends Assertions {
 
     private static SeContainer container;
 

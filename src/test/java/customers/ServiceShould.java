@@ -17,7 +17,7 @@ import java.util.UUID;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class CustomerServiceTest extends Assertions {
+class ServiceShould extends Assertions {
 
     private UUID id = UUID.randomUUID();
 

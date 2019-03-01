@@ -8,6 +8,10 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
+ * 
+ */
+
+/**
  * Iterate over the lines of a file,
  * take only the lines that contains the text "Functional"
  * sort the result in natural order

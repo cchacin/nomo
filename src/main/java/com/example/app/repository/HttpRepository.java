@@ -2,11 +2,9 @@ package com.example.app.repository;
 
 import com.example.app.domain.Customer;
 
-import javax.enterprise.inject.Alternative;
 import java.util.Optional;
 import java.util.UUID;
 
-@Alternative
 public class HttpRepository implements CustomerRepository {
     @Override
     public void saveToDb(Customer customer) {

@@ -9,8 +9,8 @@ public class App {
     public static void main(String[] args) {
 
         final AppFactory appFactory = DaggerAppFactory.builder().build();
-        final CustomerActivity controller = appFactory.controller();
-        System.out.println(controller.find(UUID.randomUUID()));
+        final CustomerActivity activity = appFactory.activity();
+        System.out.println(activity.find(UUID.randomUUID()));
 
     }
 }

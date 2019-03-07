@@ -15,8 +15,8 @@ class ServiceITest extends Assertions {
     @Test
     void storeCustomerInDbAndCache() throws Exception {
         final AppFactory appFactory = DaggerAppFactory.builder().build();
-        final CustomerActivity controller = appFactory.controller();
-        final Optional<Customer> customer = controller.find(UUID.randomUUID());
+        final CustomerActivity activity = appFactory.activity();
+        final Optional<Customer> customer = activity.find(UUID.randomUUID());
         assertThat(customer).isEmpty();
     }
 }

@@ -14,7 +14,7 @@ import javax.inject.Singleton;
 @Singleton
 @Component(modules = { AppFactory.AppModule.class })
 public interface AppFactory {
-    CustomerActivity controller();
+    CustomerActivity activity();
 
     @Module
     class AppModule {

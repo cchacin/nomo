@@ -14,6 +14,7 @@ public class MockRepository implements CustomerRepository {
 
     @Override
     public Optional<Customer> getFromDb(UUID id) {
+        System.out.println("GETTING FROM MOCK REPOSITORY");
         return Optional.empty();
     }
 

@@ -14,6 +14,7 @@ public class MockCache implements CustomerCache {
 
     @Override
     public Optional<Customer> getFromCache(UUID id) {
+        System.out.println("GETTING FROM MOCK CACHE");
         return Optional.empty();
     }
 

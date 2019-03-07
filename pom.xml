@@ -18,7 +18,7 @@
         <maven.compile.target>11</maven.compile.target>
         
         <junit.version>5.4.0</junit.version>
-        <mockito.version>2.24.5</mockito.version>
+        <mockito.version>2.25.0</mockito.version>
         <assertj.version>3.12.1</assertj.version>
     </properties>
 

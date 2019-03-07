@@ -2,7 +2,7 @@ package customers;
 
 import com.example.app.domain.Customer;
 import com.example.app.service.CustomerService;
-import com.example.app.view.CustomerController;
+import com.example.app.view.CustomerActivity;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -27,7 +27,7 @@ class ControllerShould extends Assertions {
         var customer = Customer.create(id, id.toString());
 
         // When
-        var sut = new CustomerController(service);
+        var sut = new CustomerActivity(service);
 
         // Then
         sut.create(customer);
@@ -42,7 +42,7 @@ class ControllerShould extends Assertions {
         when(service.find(id)).thenReturn(Optional.of(customer));
 
         // When
-        var sut = new CustomerController(service);
+        var sut = new CustomerActivity(service);
 
         // Then
         assertThat(sut.find(id)).contains(Customer.create(id, id.toString()));
@@ -54,7 +54,7 @@ class ControllerShould extends Assertions {
         // Given
 
         // When
-        var sut = new CustomerController(service);
+        var sut = new CustomerActivity(service);
 
         // Then
         assertThat(sut.find(id)).isEmpty();

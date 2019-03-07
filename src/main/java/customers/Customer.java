@@ -1,11 +1,11 @@
-package com.example.app.domain;
+package customers;
 
 import java.util.Objects;
 import java.util.UUID;
 
-public final class Customer {
+final class Customer {
 
-    private final UUID   id;
+    private final UUID id;
     private final String name;
 
     public Customer(
@@ -26,8 +26,12 @@ public final class Customer {
     @Override
     public boolean equals(
             final Object o) {
-        if (this == o) { return true; }
-        if (o == null || this.getClass() != o.getClass()) { return false; }
+        if (this == o) {
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
         final Customer customer = (Customer) o;
         return Objects.equals(this.id, customer.id) &&
                 Objects.equals(this.name, customer.name);

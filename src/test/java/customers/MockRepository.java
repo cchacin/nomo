@@ -1,8 +1,5 @@
 package customers;
 
-import com.example.app.domain.Customer;
-import com.example.app.repository.CustomerRepository;
-
 import java.util.Optional;
 import java.util.UUID;
 

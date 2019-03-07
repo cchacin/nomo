@@ -1,14 +1,10 @@
-package com.example.app.service;
-
-import com.example.app.cache.CustomerCache;
-import com.example.app.domain.Customer;
-import com.example.app.repository.CustomerRepository;
+package customers;
 
 import javax.inject.Inject;
 import java.util.Optional;
 import java.util.UUID;
 
-public class CustomerService {
+class CustomerService {
 
     private final CustomerRepository repository;
     private final CustomerCache cache;

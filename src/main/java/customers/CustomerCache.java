@@ -1,11 +1,9 @@
-package com.example.app.cache;
-
-import com.example.app.domain.Customer;
+package customers;
 
 import java.util.Optional;
 import java.util.UUID;
 
-public interface CustomerCache {
+interface CustomerCache {
 
     void saveToCache(
             final Customer customer);

@@ -1,11 +1,9 @@
-package com.example.app.repository;
-
-import com.example.app.domain.Customer;
+package customers;
 
 import java.util.Optional;
 import java.util.UUID;
 
-public interface CustomerRepository {
+interface CustomerRepository {
 
     public void saveToDb(
             final Customer customer);

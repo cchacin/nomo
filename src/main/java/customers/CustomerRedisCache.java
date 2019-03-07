@@ -1,19 +1,18 @@
-package com.example.app.cache;
-
-import com.example.app.domain.Customer;
+package customers;
 
 import java.util.Optional;
 import java.util.UUID;
 
-public class CustomerFileSystemCache implements CustomerCache {
+class CustomerRedisCache implements CustomerCache {
+
     @Override
     public void saveToCache(Customer customer) {
-        System.out.println("SAVED TO FILE SYSTEM");
+        System.out.println("SAVED TO REDIS");
     }
 
     @Override
     public Optional<Customer> getFromCache(UUID id) {
-        System.out.println("RETRIVED FROM FILE SYSTEM");
+        System.out.println("RETRIEVED FROM REDIS");
         return Optional.empty();
     }
 

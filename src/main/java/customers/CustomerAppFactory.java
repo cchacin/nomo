@@ -1,10 +1,5 @@
-package com.example.app;
+package customers;
 
-import com.example.app.cache.CustomerCache;
-import com.example.app.cache.CustomerFileSystemCache;
-import com.example.app.repository.CustomerRepository;
-import com.example.app.repository.CustomerDbRepository;
-import com.example.app.view.CustomerEndpoint;
 import dagger.Component;
 import dagger.Module;
 import dagger.Provides;
@@ -12,19 +7,19 @@ import dagger.Provides;
 import javax.inject.Singleton;
 
 @Singleton
-@Component(modules = { AppFactory.AppModule.class })
-public interface AppFactory {
+@Component(modules = {CustomerAppFactory.AppModule.class})
+public interface CustomerAppFactory {
     CustomerEndpoint endpoint();
 
     @Module
     class AppModule {
-    
+
         @Provides
         @Singleton
         CustomerCache cache() {
             return new CustomerFileSystemCache();
         }
-    
+
         @Provides
         @Singleton
         CustomerRepository repository() {

@@ -1,8 +1,5 @@
 package customers;
 
-import com.example.app.domain.Customer;
-import com.example.app.service.CustomerService;
-import com.example.app.view.CustomerEndpoint;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

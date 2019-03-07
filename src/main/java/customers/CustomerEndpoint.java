@@ -1,7 +1,4 @@
-package com.example.app.view;
-
-import com.example.app.domain.Customer;
-import com.example.app.service.CustomerService;
+package customers;
 
 import javax.inject.Inject;
 import java.util.Optional;

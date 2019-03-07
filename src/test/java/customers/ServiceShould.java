@@ -1,9 +1,5 @@
 package customers;
 
-import com.example.app.cache.CustomerCache;
-import com.example.app.domain.Customer;
-import com.example.app.repository.CustomerRepository;
-import com.example.app.service.CustomerService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

@@ -21,7 +21,7 @@ class EndpointShould extends Assertions {
     void storeCustomer(
             @Mock final Service service) throws Exception {
         // Given
-        final var customer = Customer.create(this.id, this.id.toString());
+        var customer = Customer.create(this.id, this.id.toString());
 
         // When
         var sut = new CustomerEndpoint(service);
@@ -35,7 +35,7 @@ class EndpointShould extends Assertions {
     void returnCustomer(
             @Mock final Service service) throws Exception {
         // Given
-        final var customer = Customer.create(this.id, this.id.toString());
+        var customer = Customer.create(this.id, this.id.toString());
         when(service.find(this.id)).thenReturn(Optional.of(customer));
 
         // When

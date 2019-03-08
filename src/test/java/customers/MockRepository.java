@@ -3,7 +3,7 @@ package customers;
 import java.util.Optional;
 import java.util.UUID;
 
-public class MockRepository implements CustomerRepository {
+public class MockRepository implements Repository {
     @Override
     public void saveToDb(Customer customer) {
 

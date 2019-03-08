@@ -16,13 +16,13 @@ public interface TestFactory {
 
         @Provides
         @Singleton
-        CustomerCache cache() {
+        Cache cache() {
             return new MockCache();
         }
 
         @Provides
         @Singleton
-        CustomerRepository repository() {
+        Repository repository() {
             return new MockRepository();
         }
     }

@@ -3,7 +3,7 @@ package customers;
 import java.util.Optional;
 import java.util.UUID;
 
-public class MockCache implements CustomerCache {
+public class MockCache implements Cache {
     @Override
     public void saveToCache(Customer customer) {
 

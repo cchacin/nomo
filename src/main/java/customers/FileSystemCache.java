@@ -3,8 +3,8 @@ package customers;
 import java.util.Optional;
 import java.util.UUID;
 
-class CustomerFileSystemCache implements CustomerCache {
-    
+class FileSystemCache implements Cache {
+
     @Override
     public void saveToCache(Customer customer) {
         System.out.println("SAVED TO FILE SYSTEM");

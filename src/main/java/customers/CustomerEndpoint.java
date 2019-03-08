@@ -6,11 +6,11 @@ import java.util.UUID;
 
 public class CustomerEndpoint {
 
-    private final CustomerService service;
+    private final Service service;
 
     @Inject
     public CustomerEndpoint(
-            final CustomerService service) {
+            final Service service) {
         this.service = service;
     }
 

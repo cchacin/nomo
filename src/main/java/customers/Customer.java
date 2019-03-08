@@ -3,7 +3,7 @@ package customers;
 import java.util.Objects;
 import java.util.UUID;
 
-final class Customer {
+public final class Customer {
 
     private final UUID id;
     private final String name;

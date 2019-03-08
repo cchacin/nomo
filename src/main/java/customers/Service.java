@@ -4,15 +4,15 @@ import javax.inject.Inject;
 import java.util.Optional;
 import java.util.UUID;
 
-class CustomerService {
+class Service {
 
-    private final CustomerRepository repository;
-    private final CustomerCache cache;
+    private final Repository repository;
+    private final Cache cache;
 
     @Inject
-    public CustomerService(
-            final CustomerRepository repository,
-            final CustomerCache cache) {
+    public Service(
+            final Repository repository,
+            final Cache cache) {
         this.repository = repository;
         this.cache = cache;
     }

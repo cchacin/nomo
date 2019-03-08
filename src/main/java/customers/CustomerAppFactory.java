@@ -16,14 +16,14 @@ public interface CustomerAppFactory {
 
         @Provides
         @Singleton
-        CustomerCache cache() {
-            return new CustomerFileSystemCache();
+        Cache cache() {
+            return new FileSystemCache();
         }
 
         @Provides
         @Singleton
-        CustomerRepository repository() {
-            return new CustomerDbRepository();
+        Repository repository() {
+            return new DbRepository();
         }
     }
 }

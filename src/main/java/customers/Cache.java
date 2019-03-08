@@ -3,7 +3,7 @@ package customers;
 import java.util.Optional;
 import java.util.UUID;
 
-interface CustomerCache {
+interface Cache {
 
     void saveToCache(
             final Customer customer);

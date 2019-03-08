@@ -3,7 +3,7 @@ package customers;
 import java.util.Optional;
 import java.util.UUID;
 
-class CustomerRedisCache implements CustomerCache {
+class RedisCache implements Cache {
 
     @Override
     public void saveToCache(Customer customer) {

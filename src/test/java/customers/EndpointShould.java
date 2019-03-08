@@ -19,7 +19,7 @@ class EndpointShould extends Assertions {
 
     @Test
     void storeCustomer(
-            @Mock CustomerService service) throws Exception {
+            @Mock Service service) throws Exception {
         // Given
         var customer = Customer.create(id, id.toString());
 
@@ -33,7 +33,7 @@ class EndpointShould extends Assertions {
 
     @Test
     void returnCustomer(
-            @Mock CustomerService service) throws Exception {
+            @Mock Service service) throws Exception {
         // Given
         var customer = Customer.create(id, id.toString());
         when(service.find(id)).thenReturn(Optional.of(customer));
@@ -47,7 +47,7 @@ class EndpointShould extends Assertions {
 
     @Test
     void returnEmpty(
-            @Mock CustomerService service) throws Exception {
+            @Mock Service service) throws Exception {
         // Given
 
         // When

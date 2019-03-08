@@ -3,16 +3,15 @@ package customers;
 import java.util.Optional;
 import java.util.UUID;
 
-class CustomerHttpRepository implements CustomerRepository {
-    
+class DbRepository implements Repository {
     @Override
     public void saveToDb(Customer customer) {
-        System.out.println("POST TO REST API");
+        System.out.println("SAVED TO DATABASE");
     }
 
     @Override
     public Optional<Customer> getFromDb(UUID id) {
-        System.out.println("GET FROM REST API");
+        System.out.println("RETRIVED FROM DATABASE");
         return Optional.empty();
     }
 

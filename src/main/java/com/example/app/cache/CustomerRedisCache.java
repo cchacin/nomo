@@ -5,7 +5,7 @@ import com.example.app.domain.Customer;
 import java.util.Optional;
 import java.util.UUID;
 
-public class RedisCache implements CustomerCache {
+public class CustomerRedisCache implements CustomerCache {
     @Override
     public void saveToCache(Customer customer) {
         System.out.println("SAVED TO REDIS");

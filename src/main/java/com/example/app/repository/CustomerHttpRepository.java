@@ -5,7 +5,7 @@ import com.example.app.domain.Customer;
 import java.util.Optional;
 import java.util.UUID;
 
-public class HttpRepository implements CustomerRepository {
+public class CustomerHttpRepository implements CustomerRepository {
     @Override
     public void saveToDb(Customer customer) {
         System.out.println("POST TO REST API");

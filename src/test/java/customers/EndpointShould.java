@@ -15,13 +15,13 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 class EndpointShould extends Assertions {
 
-    private UUID id = UUID.randomUUID();
+    private final UUID id = UUID.randomUUID();
 
     @Test
     void storeCustomer(
-            @Mock Service service) throws Exception {
+            @Mock final Service service) throws Exception {
         // Given
-        var customer = Customer.create(id, id.toString());
+        final var customer = Customer.create(this.id, this.id.toString());
 
         // When
         var sut = new CustomerEndpoint(service);
@@ -33,27 +33,27 @@ class EndpointShould extends Assertions {
 
     @Test
     void returnCustomer(
-            @Mock Service service) throws Exception {
+            @Mock final Service service) throws Exception {
         // Given
-        var customer = Customer.create(id, id.toString());
-        when(service.find(id)).thenReturn(Optional.of(customer));
+        final var customer = Customer.create(this.id, this.id.toString());
+        when(service.find(this.id)).thenReturn(Optional.of(customer));
 
         // When
         var sut = new CustomerEndpoint(service);
 
         // Then
-        assertThat(sut.find(id)).contains(Customer.create(id, id.toString()));
+        assertThat(sut.find(this.id)).contains(Customer.create(this.id, this.id.toString()));
     }
 
     @Test
     void returnEmpty(
-            @Mock Service service) throws Exception {
+            @Mock final Service service) throws Exception {
         // Given
 
         // When
         var sut = new CustomerEndpoint(service);
 
         // Then
-        assertThat(sut.find(id)).isEmpty();
+        assertThat(sut.find(this.id)).isEmpty();
     }
 }

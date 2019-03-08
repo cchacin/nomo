@@ -5,11 +5,11 @@ import java.util.UUID;
 
 class RedisCache {
 
-    public void saveToCache(Customer customer) {
+    public void saveToCache(final Customer customer) {
         System.out.println("SAVED TO REDIS");
     }
 
-    public Optional<Customer> getFromCache(UUID id) {
+    public Optional<Customer> getFromCache(final UUID id) {
         System.out.println("RETRIEVED FROM REDIS");
         return Optional.empty();
     }

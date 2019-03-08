@@ -15,12 +15,12 @@ public class CustomerEndpoint {
     }
 
     public void create(
-            Customer customer) {
-        service.create(customer);
+            final Customer customer) {
+        this.service.create(customer);
     }
 
     public Optional<Customer> find(
-            UUID id) {
-        return service.find(id);
+            final UUID id) {
+        return this.service.find(id);
     }
 }

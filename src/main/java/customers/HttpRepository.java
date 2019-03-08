@@ -5,11 +5,11 @@ import java.util.UUID;
 
 class HttpRepository {
 
-    public void saveToDb(Customer customer) {
+    public void saveToDb(final Customer customer) {
         System.out.println("POST TO REST API");
     }
 
-    public Optional<Customer> getFromDb(UUID id) {
+    public Optional<Customer> getFromDb(final UUID id) {
         System.out.println("GET FROM REST API");
         return Optional.empty();
     }

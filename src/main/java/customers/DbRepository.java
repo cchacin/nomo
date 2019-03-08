@@ -5,11 +5,11 @@ import java.util.UUID;
 
 class DbRepository {
 
-    public void saveToDb(Customer customer) {
+    public void saveToDb(final Customer customer) {
         System.out.println("SAVED TO DATABASE");
     }
 
-    public Optional<Customer> getFromDb(UUID id) {
+    public Optional<Customer> getFromDb(final UUID id) {
         System.out.println("RETRIVED FROM DATABASE");
         return Optional.empty();
     }

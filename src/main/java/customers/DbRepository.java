@@ -3,24 +3,20 @@ package customers;
 import java.util.Optional;
 import java.util.UUID;
 
-class DbRepository implements Repository {
-    @Override
+class DbRepository {
+
     public void saveToDb(Customer customer) {
         System.out.println("SAVED TO DATABASE");
     }
 
-    @Override
     public Optional<Customer> getFromDb(UUID id) {
         System.out.println("RETRIVED FROM DATABASE");
         return Optional.empty();
     }
 
-    @Override
     public void method1() {
-
     }
 
-    @Override
     public String method2() {
         return null;
     }

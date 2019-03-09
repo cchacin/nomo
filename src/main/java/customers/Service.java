@@ -1,7 +1,5 @@
 package customers;
 
-import javax.inject.Inject;
-import javax.inject.Named;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.function.Consumer;
@@ -14,11 +12,10 @@ class Service {
     private final Consumer<Customer> saveToDb;
     private final Consumer<Customer> saveToCache;
 
-    @Inject
-    Service(@Named("getFromCache") final Function<UUID, Optional<Customer>> getFromCache,
-            @Named("getFromDb") final Function<UUID, Optional<Customer>> getFromDb,
-            @Named("saveToDb") final Consumer<Customer> saveToDb,
-            @Named("saveToCache")final Consumer<Customer> saveToCache) {
+    Service(final Function<UUID, Optional<Customer>> getFromCache,
+            final Function<UUID, Optional<Customer>> getFromDb,
+            final Consumer<Customer> saveToDb,
+            final Consumer<Customer> saveToCache) {
         this.getFromCache = getFromCache;
         this.getFromDb = getFromDb;
         this.saveToDb = saveToDb;

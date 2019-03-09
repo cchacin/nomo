@@ -1,26 +1,30 @@
 package customers;
 
-import javax.inject.Inject;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class CustomerEndpoint {
 
-    private final Service service;
+    private final Function<UUID, Optional<Customer>> getCustomer;
+    private final Consumer<Customer> saveCustomer;
 
-    @Inject
     public CustomerEndpoint(
-            final Service service) {
-        this.service = service;
+            final Function<UUID, Optional<Customer>> getCustomer,
+            final Consumer<Customer> saveCustomer) {
+        this.getCustomer = getCustomer;
+        this.saveCustomer = saveCustomer;
     }
+
 
     public void create(
             final Customer customer) {
-        this.service.create(customer);
+        this.saveCustomer.accept(customer);
     }
 
     public Optional<Customer> find(
             final UUID id) {
-        return this.service.find(id);
+        return this.getCustomer.apply(id);
     }
 }

@@ -4,7 +4,7 @@ import com.example.app.cache.CustomerCache;
 import com.example.app.cache.CustomerFileSystemCache;
 import com.example.app.repository.CustomerRepository;
 import com.example.app.repository.CustomerDbRepository;
-import com.example.app.view.CustomerActivity;
+import com.example.app.view.CustomerEndpoint;
 import dagger.Component;
 import dagger.Module;
 import dagger.Provides;
@@ -14,7 +14,7 @@ import javax.inject.Singleton;
 @Singleton
 @Component(modules = { AppFactory.AppModule.class })
 public interface AppFactory {
-    CustomerActivity activity();
+    CustomerEndpoint endpoint();
 
     @Module
     class AppModule {

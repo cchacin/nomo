@@ -7,12 +7,12 @@ import javax.inject.Inject;
 import java.util.Optional;
 import java.util.UUID;
 
-public class CustomerActivity {
+public class CustomerEndpoint {
 
     private final CustomerService service;
 
     @Inject
-    public CustomerActivity(
+    public CustomerEndpoint(
             final CustomerService service) {
         this.service = service;
     }

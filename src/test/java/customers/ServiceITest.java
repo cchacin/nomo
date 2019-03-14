@@ -1,7 +1,7 @@
 package customers;
 
 import com.example.app.domain.Customer;
-import com.example.app.view.CustomerActivity;
+import com.example.app.view.CustomerEndpoint;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -13,8 +13,8 @@ class ServiceITest extends Assertions {
     @Test
     void storeCustomerInDbAndCache() throws Exception {
         final TestFactory appFactory = DaggerTestFactory.builder().build();
-        final CustomerActivity activity = appFactory.activity();
-        final Optional<Customer> customer = activity.find(UUID.randomUUID());
+        final CustomerEndpoint endpoint = appFactory.endpoint();
+        final Optional<Customer> customer = endpoint.find(UUID.randomUUID());
         assertThat(customer).isEmpty();
     }
 }

@@ -2,7 +2,7 @@ package customers;
 
 import com.example.app.domain.Customer;
 import com.example.app.service.CustomerService;
-import com.example.app.view.CustomerActivity;
+import com.example.app.view.CustomerEndpoint;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,7 +16,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class ActivityShould extends Assertions {
+class EndpointShould extends Assertions {
 
     private UUID id = UUID.randomUUID();
 
@@ -27,7 +27,7 @@ class ActivityShould extends Assertions {
         var customer = Customer.create(id, id.toString());
 
         // When
-        var sut = new CustomerActivity(service);
+        var sut = new CustomerEndpoint(service);
 
         // Then
         sut.create(customer);
@@ -42,7 +42,7 @@ class ActivityShould extends Assertions {
         when(service.find(id)).thenReturn(Optional.of(customer));
 
         // When
-        var sut = new CustomerActivity(service);
+        var sut = new CustomerEndpoint(service);
 
         // Then
         assertThat(sut.find(id)).contains(Customer.create(id, id.toString()));
@@ -54,7 +54,7 @@ class ActivityShould extends Assertions {
         // Given
 
         // When
-        var sut = new CustomerActivity(service);
+        var sut = new CustomerEndpoint(service);
 
         // Then
         assertThat(sut.find(id)).isEmpty();

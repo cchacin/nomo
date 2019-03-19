@@ -22,13 +22,13 @@ class Service {
         this.saveToCache = saveToCache;
     }
 
-    public void create(
+    void create(
             final Customer customer) {
         this.saveToDb.accept(customer);
         this.saveToCache.accept(customer);
     }
 
-    public Optional<Customer> find(
+    Optional<Customer> find(
             final UUID id) {
         final Optional<Customer> cachedCustomer = this.getFromCache.apply(id);
         if (cachedCustomer.isPresent()) {

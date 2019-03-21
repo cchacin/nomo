@@ -1,28 +1,30 @@
-# Refactoring to functional
+# Modularity and Decoupling, The Right Way
+
+Slides on [SpeakerDeck](https://goo.gl/fsmi85)
+
+Creating and maintaining a Java codebase is not an easy task, especially with a codebase with thousands of tests. We often try to solve this problem with new libraries, frameworks and even new languages that can create a false sense of decoupling and modularity. 
+
+But the answer is not in the libraries, nor in the frameworks. The answer is in the core of the Java language itself and it has been there since the early stages. 
+
+In this talk, you will learn how to organize your codebase in such a way that your code is really decoupled and modularized, and so that you don't have to modify your tests when you decide to change some implementation details (like choosing a different HTTP library or a different database abstraction layer).
+
+## Branches
+
+We have 2 branches:
  
-- Package by feature (vs. by layer: https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition)
-  - By looking at the structure you can already tell what the app is all about
-  - Higher modularity
-  - Easier code navigation
-  - Higher level of abstraction
-  - Separates both features and layers
-  - More readable and maintainable structure
-  - More cohesion
-  - Much easier to scale
-  - Less chance to accidentally modify unrelated classes or files
-  - Much easier to add or remove application features
-  - And much more reusable modules.
-- Modularity and deletion
-  - Scopes (public, package-private)
-- Decoupling code using Java's Functional interfaces
-- Dependency injection. Binding Functional interfaces to implementations (lambdas, method references, anonymous classes, etc)
-- Testing without the need of a Mocking framework thanks to Java's Functional interfaces.
-- Exercises
-  - > Iterate over the lines of a file, take only the lines that contains the text "23",sort the result in natural order, and return the first line of that result.
-    - `cat README.md | grep Functional | sort -r`
+ * `start` branch: which is the original code with the traditional approach of doing things and then
+ * `finish` branch: that contains the refactored code with the final implementation
+ 
+## How to run
 
+If you have JDK11 already installed and configured in your machine, you only have to run the maven wrapper command to build and test the application:
 
-QUOTES:
+```bash
+./mvnw package
+``` 
 
-- FP: spend less time worrying about state (Brian Gesiak)
-- 
+If you don't have the JDK11 installed, you have to run the JDK wrapper to download and configure the JDK for you followed by the maven wrapper command:
+
+```bash
+./jdk-wrapper.sh ./mvnw package
+```
